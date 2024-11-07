@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wastewater Potability Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_survey.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.jpg') }}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-ribbon">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('survey_main') }}">Survey</a>
+            <a href="{{ url_for('result') }}">Result</a>
+            <a href="#login" class="login">Login</a>
+        </div>
+    </header>
+    <main>
+        <h1>Wastewater Parameters</h1>
+        <form action="/predict" method="POST" id="survey-form">
+            <div class="form-group">
+                <label for="pH">pH:</label>
+                <input type="number" id="pH" name="pH" class="form-input" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="hardness">Hardness:</label>
+                <input type="number" id="hardness" name="hardness" class="form-input" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="sulfates">Sulfates:</label>
+                <input type="number" id="sulfates" name="sulfates" class="form-input" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="conductivity">Conductivity:</label>
+                <input type="number" id="conductivity" name="conductivity" class="form-input" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="Solids">Solids:</label>
+                <input type="number" id="Solids" name="Solids" class="form-input" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="turbidity">Turbidity:</label>
+                <input type="number" id="turbidity" name="turbidity" class="form-input" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="Halomethanes">Halomethanes:</label>
+                <input type="number" id="Halomethanes" name="Halomethanes" class="form-input" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="Chloramine">Chloramine:</label>
+                <input type="number" id="Chloramine" name="Chloramine" class="form-input" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="Organic Carbon">Organic Carbon:</label>
+                <input type="number" id="Organic Carbon" name="Organic Carbon" class="form-input" step="0.01" required>
+            <a href="Result.html" target="_blank">
+    <button type="submit" class="submit-button">Submit</button>
+</a>
+<div id="feedback" class="feedback"></div>
+<button type="button" class="clear-button" onclick="clearForm()">Clear</button>
+
+        </form>
+    </main>
+    <script src="{{ url_for('static', filename='scripts_survey.js') }}"></script>
+</body>
+</html>

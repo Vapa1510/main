@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Potability</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo1.PNG ') }}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-ribbon">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('survey_main') }}">Survey</a>
+            <a href="{{ url_for('result') }}">Result</a>
+            <a href="#login" class="login">Login</a>
+        </div>
+    </header>
+    <main>
+        <section class="intro2">
+            <h1>Waste Water</h1>
+            <p>Wastewater is any water that has been used and is no longer suitable for its intended purpose...</p>
+        </section>
+
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="{{ url_for('static', filename='images/i1.jpg') }}" alt="Image 1">
+                <img src="{{ url_for('static', filename='images/i2.jpeg') }}" alt="Image 2">
+                <img src="{{ url_for('static', filename='images/i3.jpeg') }}" alt="Image 3">
+                <img src="{{ url_for('static', filename='images/i4.jpeg') }}" alt="Image 4">
+                <img src="{{ url_for('static', filename='images/i5.jpeg') }}" alt="Image 5">
+                <img src="{{ url_for('static', filename='images/i6.jpeg') }}" alt="Image 6">
+                <img src="{{ url_for('static', filename='images/i7.jpg') }}" alt="Image 7">
+                
+                <img src="{{ url_for('static', filename='images/i1.jpg') }}" alt="Image 1(repeat)">
+                <img src="{{ url_for('static', filename='images/i2.jpeg') }}" alt="Image 2(repeat)">
+                <img src="{{ url_for('static', filename='images/i3.jpeg') }}" alt="Image 3(repeat)">
+                <img src="{{ url_for('static', filename='images/i4.jpeg') }}" alt="Image 4(repeat)">
+                <img src="{{ url_for('static', filename='images/i5.jpeg') }}" alt="Image 5(repeat)">
+                <img src="{{ url_for('static', filename='images/i6.jpeg') }}" alt="Image 6(repeat)">
+                <img src="{{ url_for('static', filename='images/i7.jpg') }}" alt="Image 7(repeat)">
+                
+               
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <section class="intro">
+            <h1>Wastewater and Its Treatment</h1>
+            <p>Learn about the parameters affecting wastewater treatment and their significance.</p>
+        </section>
+
+        <section class="parameters">
+            <div class="parameter" id="pH">
+                <img src="{{ url_for('static', filename='images/pH.PNG') }}" alt="pH Image" class="parameter-img">
+                <h2>pH</h2>
+                <p>pH is a measure of the relative amount of free hydrogen and hydroxyl ions in a substance.</p>
+            </div>
+            <div class="parameter" id="Turbidity">
+                <img src="{{ url_for('static', filename='images/Turbidity.JPG') }}"  alt="Turbidity Image" class="parameter-img">
+                <h2>Turbidity</h2>
+                <p>The ability of water to conduct electricity, indicating the presence of dissolved ions and salts.</p>
+            </div>
+            <div class="parameter" id="Hardness">
+                <img src="{{ url_for('static', filename='images/Hardness.PNG') }}"  alt="Hardness Image" class="parameter-img">
+                <h2>Hardness</h2>
+                <p>The hardness of water is mainly contributed by calcium and magnesium ions.</p>
+            </div>
+            <div class="parameter" id="Sulfates">
+                <img src="{{ url_for('static', filename='images/Sulfates.JPEG') }}"  alt="Sulfates Image" class="parameter-img">
+                <h2>Sulfates</h2>
+                <p>Sulfate is one of the major dissolved components of rain.</p>
+            </div>
+            <div class="parameter" id="Conductivity">
+                <img src="{{ url_for('static', filename='images/Conductivity.JPG') }}" alt="Conductivity Image" class="parameter-img">
+                <h2>Conductivity</h2>
+                <p>The ability of water to conduct electricity, indicating the presence of dissolved ions and salts.</p>
+            </div>
+            <div class="parameter" id="Organic_Carbon">
+                <img src="{{ url_for('static', filename='images/organiccarbon.JPG') }}" alt="Organic Carbon Image" class="parameter-img">
+                <h2>Organic Carbon</h2>
+                <p>A measure of organic matter in water, indicating the amount of carbon-based compounds.</p>
+            </div>
+            <div class="parameter" id="HaloMethanes">
+                <img src="{{ url_for('static', filename='images/Halomethanes.PNG') }}"alt="HaloMethanes Image" class="parameter-img">
+                <h2>HaloMethanes</h2>
+                <p>Particles suspended in water scatter light, indicating the presence of impurities.</p>
+            </div>
+            <div class="parameter" id="Chloramines">
+                <img src="{{ url_for('static', filename='images/chloroamines.JPEG') }}"alt="Chloramines Image" class="parameter-img">
+                <h2>Chloramines</h2>
+                <p>Chemical compounds formed by mixing chlorine with ammonia.</p>
+            </div>
+            <div class="parameter" id="Solids">
+                <img src="{{ url_for('static', filename='images/solids1.JPG') }}" alt="Solids Image" class="parameter-img">
+                <h2>Solids</h2>
+                <p>Particles suspended or dissolved in water, including organic and inorganic matter.</p>
+            </div>
+        </section>
+
+        <div class="more-info-container">
+            <a href="{{ url_for('survey_main') }}" class="more-info">Click here to know more</a>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='essential.js') }}"></script>
+</body>
+</html>
